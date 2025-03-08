@@ -2,7 +2,7 @@ name: first-exercise-workflow
 on: [push, pull_request]
 
 jobs:
-  shell-cmd-job:
+  check-version-job:
     runs-on: ubuntu-latest
     steps:
       - name: multiple line cmd
