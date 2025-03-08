@@ -21,7 +21,7 @@ jobs:
           import sys
           print(sys.version)
       - name: sys.version 출력
-        shell: node  # Step Level Default Shell
+        shell: node.js  # Step Level Default Shell
         run: | 
           console.log(process.version)
       - name: 디렉토리 변경
