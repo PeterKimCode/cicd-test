@@ -25,7 +25,7 @@ jobs:
         run: | 
           console.log(process.version)
       - name: 디렉토리 변경
-        working-directory: /home/runner
+        working-directory: /home
         run: |
           mkdir test_folder
           "hello world" | Set-Content sample.txt
