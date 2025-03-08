@@ -1,0 +1,34 @@
+name: Change Working Dir & Shell
+on: [push]
+
+jobs:
+  show-working-directory-win:
+    runs-on: windows-latest
+    defaults:  # Job Level Defaults
+      run:
+        shell: pwsh
+    steps:
+      - name: uname -a 실행
+        shell: bash  # Step Level Default Shell
+        run: 
+          uname -a
+      - name: Get-ComputerInfo 실행
+        run: 
+          Get-ComputerInfo
+      - name: sys.version 출력
+        shell: python  # Step Level Default Shell
+        run: | 
+          import sys
+          print(sys.version)
+      - name: sys.version 출력
+        shell: node  # Step Level Default Shell
+        run: | 
+          console.log(process.version)
+      - name: 디렉토리 변경
+        working-directory: /home/runner
+        run: |
+          mkdir test_folder
+          "hello world" | Set-Content sample.txt
+          Get-Content sample.txt
+
+ 
