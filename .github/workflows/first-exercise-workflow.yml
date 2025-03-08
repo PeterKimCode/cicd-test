@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: multiple line cmd
         run: |
-          python —version
-          pip —version
+          python --version
+          pip --version
 
